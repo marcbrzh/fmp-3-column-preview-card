@@ -1,0 +1,168 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --white: hsla(0, 0%, 100%, 1);
+  --very-light-gray: hsl(0, 0%, 95%);
+  --font-primary: "Lexend Deca", sans-serif;
+  --font-secondary: "Big Shoulders Display", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.card {
+  padding: 2.7rem 2.7rem;
+  text-align: center; /* Garde le texte centré par défaut */
+}
+
+.card img {
+  display: block;
+  width: 60px;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  color: var(--white);
+  opacity: 0.9;
+  font-family: var(--font-secondary);
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 1.55rem;
+}
+
+.card p {
+  color: var(--transparent-white);
+  opacity: 0.9;
+  font-size: 0.83rem;
+  margin-bottom: 1.3rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+.card button {
+  background-color: var(--very-light-gray);
+  border: 2px solid transparent;
+  border-radius: 30px;
+  padding: 0.75rem 1.8rem;
+  margin: 0 0 0 3px;
+  font-family: var(--font-primary);
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease;
+  box-sizing: border-box;
+  text-align: left; /* Force l'alignement à gauche */
+  display: block; /* Assure que le bouton occupe toute la largeur disponible */
+}
+
+.card button:hover {
+  background-color: transparent;
+  border: 2px solid var(--transparent-white); /* Change uniquement la couleur du border */
+  color: var(--white);
+}
+
+.sedans {
+  border-radius: 7px 7px 0px 0px;
+  background-color: var(--bright-orange);
+}
+
+.sedans button {
+  color: var(--bright-orange);
+}
+
+.suvs {
+  background-color: var(--dark-cyan);
+}
+
+.suvs button {
+  color: var(--dark-cyan);
+}
+
+.luxury {
+  border-radius: 0 0 7px 7px;
+  background-color: var(--very-dark-cyan);
+}
+
+.luxury button {
+  color: var(--very-dark-cyan);
+}
+
+/* RESPONSIVE STYLE */
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: row;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .card {
+    flex: 1;
+    padding: 2rem;
+    height: 500px;
+    padding: 3rem;
+  }
+
+  .card img {
+    display: block;
+    width: 65px;
+    margin-bottom: 2.2rem;
+  }
+
+  .card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.55rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+    line-height: 25px;
+    margin-bottom: 85px;
+  }
+
+  .card button {
+    padding: 0.75rem 1.8rem;
+    margin: 0 0 0 5px;
+    font-size: 0.85rem;
+    transform: scale(1.07);
+  }
+
+  .sedans {
+    border-radius: 7px 0 0 7px;
+  }
+
+  .luxury {
+    border-radius: 0 7px 7px 0;
+  }
+}
